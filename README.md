@@ -15,6 +15,10 @@ This isn't a one-off config. It's the setup I've carried from project to project
 
 It will keep changing. When a rule stops earning its place or a new one starts to, this repo changes first.
 
+## What it's for
+
+Code review is for architecture, logic and organization: does this belong here, does it do the right thing, is it shaped well. It was never meant for catching a missing `sealed`, a stray `var` or a `DateTime.Now`. With rules this strict the build catches those first, so the reviewer only sees code that already follows the house style and can spend the review on what a tool can't judge.
+
 ## What's in the box
 
 | File | What it enforces |
