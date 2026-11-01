@@ -1,0 +1,8 @@
+[*.cs]
+
+# CA1707: Identifiers should not contain underscores - underscores are idiomatic for test method names.
+dotnet_diagnostic.CA1707.severity = none
+
+# TypeRules: test-helper entities (TestAggregate & co.) set their state directly.
+typerules.entities.max_setter_accessibility = internal
+typerules.entities.require_readonly_collections = false
