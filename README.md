@@ -4,6 +4,17 @@ A strict, copy-able .NET setup: analyzers, style rules, type-shape rules and ban
 fail the build instead of waiting for code review. Built for humans and AI agents alike - an
 agent that edits code here gets a compiler error, not a lecture, when it drifts.
 
+## Where it comes from
+
+This isn't a one-off config. It's the setup I've carried from project to project and tightened each time:
+
+- **2018-2023.** Started with StyleCop, so style stopped being a review topic.
+- **2024.** Added nullable reference types and treated warnings as errors, so the compiler said no instead of a reviewer.
+- **2024-2025.** Reworked the setup together with another developer, on a larger codebase.
+- **2026, my startup.** Shaping it now for a codebase where AI agents write most of the code: banned APIs, my own [TypeRules](https://github.com/hlib-zinchenko/Hlibz.TypeRules.Analyzers) and [ModelRules](https://github.com/hlib-zinchenko/Hlibz.EntityFrameworkCore.ModelRules), and a `CLAUDE.md` with the same rules for the agent.
+
+It will keep changing. When a rule stops earning its place or a new one starts to, this repo changes first.
+
 ## What's in the box
 
 | File | What it enforces |
