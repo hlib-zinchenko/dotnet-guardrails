@@ -9,7 +9,9 @@ public class OrderTests
     [Fact]
     public void AddLine_WithNewLine_AppendsItToLines()
     {
-        Order order = new(new OrderId(Guid.NewGuid()), new DateTimeOffset(2026, 1, 1, 0, 0, 0, TimeSpan.Zero));
+        Order order = new(
+            new OrderId(Guid.NewGuid()),
+            new DateTimeOffset(2026, 1, 1, 0, 0, 0, TimeSpan.Zero));
 
         order.AddLine("Coffee");
 

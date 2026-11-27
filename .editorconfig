@@ -166,6 +166,12 @@ dotnet_diagnostic.CA1056.severity = none
 # CA1062: Validate arguments of public methods
 dotnet_diagnostic.CA1062.severity = none
 
+# CA1508: Avoid dead conditional code
+# Off: its value tracking is slow on large, branchy methods (it took about 97% of one real
+# project's compile time - 4 minutes down to 7 seconds without it) and it misreads C# 15 union
+# patterns as always true. Sonar's S2583/S2589 cover the same ground.
+dotnet_diagnostic.CA1508.severity = none
+
 # CA1710: Identifiers should have correct suffix
 dotnet_code_quality.CA1710.api_surface = all
 dotnet_code_quality.CA1710.additional_required_suffixes = T:FluentValidation.AbstractValidator`1->Validator
